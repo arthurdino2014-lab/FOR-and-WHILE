@@ -21,3 +21,20 @@ for (let tentativa = 1; tentativa <= maxTentativas; tentativa++) {
 if (!logado) {
     alert("Número máximo de tentativas excedido! Sua conta foi bloqueada por segurança.");
 }
+
+const usuarioCorreto = "admin";
+const senhaCorreta = "1234";
+
+let loginSucesso = false;
+
+while (!loginSucesso) {
+    let usuarioDigitado = prompt("Digite o seu usuário:");
+    let senhaDigitada = prompt("Digite a sua senha:");
+
+    if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+        alert("Login efetuado com sucesso! Bem-Vindo.");
+        loginSucesso = true;
+    } else {
+        alert("Usuário ou senha incorretos. Tente novamente!");
+    }
+}
